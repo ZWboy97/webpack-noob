@@ -37,11 +37,16 @@ module.exports = {
             {   // babel 加载ES6代码
                 test: /\.js$/,  // 匹配
                 loader: 'babel',   // 使用哪种loader加载
-                include: path.resolve(__dirname, 'src'),
-                exclude: path.resolve(__dirname, 'node_modules'),
+                include: path.resolve(__dirname, 'src'),    // 指定加载的路径
+                exclude: path.resolve(__dirname, 'node_modules'),   // 排除加载的路径
                 query: {
                     presets: ['latest'] // 转换所有的ES6
                 }
+            },
+            {
+                test: /\.css$/,  // 匹配
+                loader: 'style-loader!css-loader',   // 先使用css-loader加载css文件，然后再将结果加载到html中的style标签中
+                exclude: path.resolve(__dirname, 'node_modules'),
             }
         ]
     }
