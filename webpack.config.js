@@ -31,5 +31,18 @@ module.exports = {
             inject: "body",
             chunks: ['page2']
         }),
-    ]
+    ],
+    module: {
+        rules: [    // 规则列表
+            {   // babel 加载ES6代码
+                test: /\.js$/,  // 匹配
+                loader: 'babel',   // 使用哪种loader加载
+                include: path.resolve(__dirname, 'src'),
+                exclude: path.resolve(__dirname, 'node_modules'),
+                query: {
+                    presets: ['latest'] // 转换所有的ES6
+                }
+            }
+        ]
+    }
 }
