@@ -47,7 +47,11 @@ module.exports = {
                 test: /\.css$/,  // 匹配
                 loader: 'style-loader!css-loader',   // 先使用css-loader加载css文件，然后再将结果加载到html中的style标签中
                 exclude: path.resolve(__dirname, 'node_modules'),
+            },
+            {
+                test: /\.less$/,
+                loader: 'style-loader!css-loader!less-loader'
             }
         ]
-    }
+    },
 }

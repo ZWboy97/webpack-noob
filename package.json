@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --config webpack.config.js --progress --display-modules  --colors --display-reasons"
   },
+  "browserslist": "last 5 version",
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -15,11 +16,17 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
+    "autoprefixer": "^9.7.1",
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "babel-preset-latest": "^6.24.1",
     "css-loader": "^3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.23.3",
+    "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0"
   }
 }
